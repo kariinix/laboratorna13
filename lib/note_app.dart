@@ -65,7 +65,7 @@ class NoteAppState extends State<NoteApp> {
                   Expanded(
                     child: TextFormField(
                       controller: _controller,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: 'Enter note',
                         border: OutlineInputBorder(),
                         focusedBorder: OutlineInputBorder(
@@ -108,12 +108,12 @@ class NoteAppState extends State<NoteApp> {
                           Expanded(
                             child: Text(
                               note.content,
-                              style: TextStyle(fontSize: 18),
+                              style: const TextStyle(fontSize: 18),
                             ),
                           ),
                           Text(
                             note.date,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 12,
                               color: Colors.black,
                             ),
@@ -121,7 +121,7 @@ class NoteAppState extends State<NoteApp> {
                         ],
                       ),
                       trailing: IconButton(
-                        icon: Icon(Icons.delete, color: Colors.red),
+                        icon: const Icon(Icons.delete, color: Colors.red),
                         onPressed: () => _deleteNote(note.id!),
                       ),
                     ),
